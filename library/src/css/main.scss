@@ -1,0 +1,76 @@
+@import "mixins";
+@import "header-footer";
+body{
+    padding:0;
+    margin:0 auto;
+    @include for-desktop{
+        width:90%;
+    }
+}
+.wp-bootstrap-blocks-row.row{
+    
+    
+    margin:0 auto;
+    @include for-desktop{
+        padding-left:15px;
+    padding-right: 15px;
+    }
+
+ 
+    .col-12{
+        margin:1em;
+      
+        .wp-block-cover{
+            border-radius: 8px;
+        }
+    }
+}
+
+.wp-block-cover__image-background{
+    border-radius: 10px;
+}
+.wp-block-cover-image.has-background-dim:not([class*=-background-color]), .wp-block-cover-image .has-background-dim:not([class*=-background-color]), .wp-block-cover.has-background-dim:not([class*=-background-color]), .wp-block-cover .has-background-dim:not([class*=-background-color]){
+    background-color: transparent;
+}
+
+.wp-block-cover{
+    padding:0;
+    min-height:300px;
+    @include for-desktop{
+        min-height:400px;
+    }
+    .wp-block-cover__inner-container{
+        background-color: rgba(42, 81, 187, 0.719);
+        position: absolute;
+        border-radius: 10px;
+        height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p{
+            padding:0 1em;
+            color:white;
+        }
+    }
+
+    @include for-desktop{
+        min-height:400px;
+        &:hover{
+            .wp-block-cover__inner-container{
+            p{
+                opacity: 1;
+            }
+        }
+        }
+        .wp-block-cover__inner-container{
+            background-color: transparent;
+            p{
+                opacity: 0;
+            }
+            p{
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+let navButton=document.querySelector(".nav-button");navButton.addEventListener("click",(t=>{t.preventDefault(),document.body.classList.toggle("nav-visible")}));
