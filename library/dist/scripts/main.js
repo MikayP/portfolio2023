@@ -1,1 +1,1 @@
-let navButton=document.querySelector(".nav-button");navButton.addEventListener("click",(t=>{t.preventDefault(),document.body.classList.toggle("nav-visible")}));
+let navButton=document.querySelector(".nav-button");navButton.addEventListener("click",(e=>{e.preventDefault(),document.body.classList.toggle("nav-visible")})),jQuery(document).ready((function(e){jQuery(window).scroll((function(){jQuery(document).scrollTop()>100?jQuery("header").addClass("down"):jQuery("header").removeClass("down")}))}));

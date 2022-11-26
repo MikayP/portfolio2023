@@ -22,6 +22,8 @@ header {
   z-index: $zindex-header;
 }
 .nav-wrapper {
+  display: flex;
+  justify-content: center;
   li {
     list-style: none;
   }
@@ -48,7 +50,7 @@ header {
       visibility $nav-transition-speed;
     visibility: hidden;
     width: $nav-width;
-
+    z-index:3;
     .nav-visible & {
       transform: translateX(0);
       visibility: visible;
@@ -158,7 +160,7 @@ header {
 .button-lines-x {
   .lines {
     transition: background 0.3s ease;
-
+    z-index: 5;
     &:after,
     &:before {
       transform-origin: 50% 50% 0;
@@ -188,23 +190,55 @@ header {
 }
 
 @include for-desktop {
+  .nav-wrapper{
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    z-index: 5;
+  }
   header {
+    background-color:rgb(10,25,47);
+    z-index:1;
+    display: flex;
+
+    align-items: center;
+    a {
+      padding: 1em;
+      margin: 0.5em;
+      color:white;
+      font-weight: 600;
+    }
+    &.down{
+      background-color:red;
+      height:35px;
+      a{
+        color:blue;
+      }
+    }
     .button-lines {
       display: none;
+    }
+
+    #menu-primary-menu {
+      padding-left: 0px;
+   
     }
   }
   #menu-primary-menu,
   h1 {
     display: flex;
+    
+  }
+  #menu-primary-menu{
+    justify-content: end;
+  }
+  h1{
     justify-content: center;
   }
-  #menu-primary-menu {
-    padding-left: 0px;
-    a {
-      padding: 1em;
-      margin: 0.5em;
-    }
-  }
+header,.nav-wrapper a{
+  transition: all 0.6s ease-in-out;
+}
+
 }
 
 // #menu-primary-menu{
