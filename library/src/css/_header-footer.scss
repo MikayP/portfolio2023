@@ -197,7 +197,7 @@ header {
     z-index: 5;
   }
   header {
-    background-color:rgb(10,25,47);
+    background-color:$dark;
     z-index:1;
     display: flex;
 
@@ -205,15 +205,13 @@ header {
     a {
       padding: 1em;
       margin: 0.5em;
-      color:white;
+      color:$blue;
       font-weight: 600;
     }
     &.down{
-      background-color:red;
+      background-color:$dark-1;
       height:35px;
-      a{
-        color:blue;
-      }
+     
     }
     .button-lines {
       display: none;

@@ -1,8 +1,27 @@
 @import "mixins";
 @import "header-footer";
+
+@font-face{
+    font-family: monterrat;
+    src: url(../../Montserrat-Regular.ttf)
+}
 body{
     padding:0;
     margin:0 auto;
+    font-family: "monterrat", sans-serif;
+}
+p{
+    color:$blue;
+    font-size: 1.5em;
+
+}
+p, h2{
+    margin:$margin;
+}
+h2{ color:$light;
+font-size: 3em;}
+p{
+    font-weight: 600;
 }
 .wp-bootstrap-blocks-row.row{
     flex-direction: column;
@@ -14,9 +33,20 @@ body{
 
  
 }
+.wp-block-buttons{
+    margin: 0.7em 0;
+    .wp-block-button{
+        .wp-block-button__link{
+            border-radius: 4px;
+            background-color:transparent;
+            border:2px solid $blue;
+        }
+    }
+}
 
 .custom-container{
-    min-height: 100vh;
+    min-height: calc(100vh - 32px);
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     padding:0 10px;
@@ -31,7 +61,7 @@ body{
         min-height:400px;
     }
     .wp-block-cover__inner-container{
-        background-color: rgba(42, 81, 187, 0.719);
+        background-color: rgba(42, 81, 187, 0.5);
         position: absolute;
         height:100%;
         display: flex;
@@ -46,19 +76,30 @@ body{
 
     @include for-desktop{
         min-height:400px;
+        overflow:hidden;
+        img{
+            transition: all 0.3s ease-in-out; 
+        }
         &:hover{
+            img{
+                transform: scale(1.1);
+            } 
             .wp-block-cover__inner-container{
+                background-color: #222831a6;
             p{
                 opacity: 1;
             }
+            
+            
         }
         }
         .wp-block-cover__inner-container{
+
             background-color: transparent;
             p{
                 opacity: 0;
             }
-            p{
+            &,p{
                 transition: all 0.5s ease-in-out;
             }
         }
