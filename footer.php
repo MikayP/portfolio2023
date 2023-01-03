@@ -4,7 +4,6 @@
 <a href=""><i class="fas fa-envelope"></i></a>
 
 </footer> -->
-
 <?php wp_footer(); ?>
 
 </body>

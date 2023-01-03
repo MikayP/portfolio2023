@@ -1,13 +1,13 @@
 @import "mixins";
 @import "header-footer";
-
+@import "form";
 @font-face{
     font-family: monterrat;
     src: url(../../Montserrat-Regular.ttf)
 }
 body{
     padding:0;
-    margin:0 auto;
+    margin:0 3em;
     font-family: "monterrat", sans-serif;
 }
 p{
@@ -18,10 +18,19 @@ p{
 p, h2{
     margin:$margin;
 }
-h2{ color:$light;
-font-size: 3em;}
-p{
-    font-weight: 600;
+h2,h3{
+    color:$light;
+}
+h2{ 
+font-size: 3em;
+}
+h5,h6{
+    font-size: 1em;
+}
+
+h2,h5,h6{
+     margin:1em auto;
+    max-width: 1000px;
 }
 .wp-bootstrap-blocks-row.row{
     flex-direction: column;
@@ -44,19 +53,77 @@ p{
     }
 }
 
+.container-width, .custom-container{
+  max-width: 1000px;
+}    
 .custom-container{
     min-height: calc(100vh - 32px);
-    max-width: 1000px;
     display: flex;
     flex-direction: column;
-    padding:0 10px;
+    padding:0px;
     justify-content: center;
     align-items: flex-start;
+    &-row{
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    &-1{
+        // min-height: auto;
+    }
+    h2{
+        margin-left:0;
+    }
 }
+
+.tab {
+    // float: left;
+    border-right: 2px solid $blue;
+    background-color:$dark;
+    width: 30%;
+    // height: 300px;
+    // border-radius: 4px 0px 0px 4px;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: $light;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover, .tab button.active {
+    background-color: $dark-1;
+  }
+  
+
+  
+  /* Style the tab content */
+  .tabcontent {
+    // float: left;
+    padding: 0px 12px;
+    // border: 1px solid $blue;
+    width: 70%;
+    border-left: none;
+    // height: 300px;
+    // border-radius: 0px 4px 4px 0px;
+  }
 
 .wp-block-cover{
     padding:0;
     min-height:300px;
+    &__background{
+        opacity: 0.2 !important;
+    }
     @include for-desktop{
         min-height:400px;
     }
@@ -101,6 +168,106 @@ p{
             }
             &,p{
                 transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+}
+
+.wp-bootstrap-blocks-container_work{
+    position: relative;
+    margin-bottom: 5em;
+    max-width: 1000px;
+    figure{
+        margin:0;
+        .bg-color{
+            background-color: $blue;
+            position: absolute;
+            top:0;
+            left:0;
+            height: 100%;
+            width: 100%;
+            opacity: 0.5;
+              transition: all 0.3s ease-in-out;
+        }
+    }
+    .wp-block-image{
+        img{
+            width:100%;
+            object-fit: cover;
+            min-height: 400px;
+            max-height: 450px;
+        }
+
+    }
+    .info-container, figure img, .bg-color{
+        border-radius: 8px;
+    }
+    .info-container{
+        position:absolute;
+        top:0;
+        height:-webkit-fill-available;
+        width:-webkit-fill-available;
+        left:0;
+        padding:1em;
+        h5{
+            color:$dark;
+        }
+        h6{
+            color:$light;
+        }
+        p{
+            color:$light;
+        }
+        i{
+            position: absolute;
+            bottom:15px;
+            right:15px;
+            color:$light;
+            font-size: 2em;
+        }
+    }
+
+    @include for-desktop{
+        figure{
+            width:50%;
+            position: relative;
+        }
+        .info-container{
+            width: 60%;
+            height:60%;
+            margin: auto;
+            position: absolute;
+            top: 0; bottom: 0; 
+            background-color: $dark-1;
+            &_box{
+                p{
+                    font-size:1em;
+                }
+
+            }
+            .bg-color{
+                width:50%;
+              
+            }
+        }
+        &_left{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    &_right{
+        .info-container{
+            right:0;
+            text-align: right;
+            left:auto;
+        }
+    }
+       
+    }
+
+    &:hover{
+        figure{
+            .bg-color{
+                background-color: transparent;
             }
         }
     }
