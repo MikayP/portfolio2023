@@ -3,4 +3,10 @@
     .wpforms-field-label,.wpforms-field-sublabel{
         display:none !important;
     }
+    .wpforms-error{
+        color:$light !important;
+    }
+    .wpforms-form .wpforms-field input.wpforms-error{
+        border:1px solid $blue !important;
+    }
 }
