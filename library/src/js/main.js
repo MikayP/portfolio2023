@@ -43,3 +43,5 @@ jQuery('.menu-item a').on('click', function(e){
     scrollTop: section_offset
   }, 1000);
 });
+
+AOS.init();
