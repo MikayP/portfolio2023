@@ -1,4 +1,4 @@
-.wpforms-container{
+.custom-form-container{
     width:100% !important;
     .wpforms-field-label,.wpforms-field-sublabel{
         display:none !important;
@@ -8,5 +8,15 @@
     }
     .wpforms-form .wpforms-field input.wpforms-error{
         border:1px solid $blue !important;
+    }
+
+    input,textarea{
+        background-color:$light !important;
+        color:$dark-1 !important;
+        font-weight: 600;
+        &::placeholder{
+            color:$dark-1 !important;
+            font-weight: 600;
+        }
     }
 }

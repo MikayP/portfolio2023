@@ -14,10 +14,11 @@
     @media (min-width: 1800px) { @content; }
   }
     
-  $dark: #222831;
-  $dark-1: #393E46;
-  $blue: #00ADB5;
-  $light: #EEEEEE;
+  $dark: #2a1b3d;
+  $dark-1: #44318d;
+  $dark-1-opacity: #43318d7c;
+  $blue: #e98074;
+  $light: #a4b3b6;
   $margin: 0.5rem 0;
   body{
     background-color: $dark;

@@ -88,9 +88,15 @@ h2,h5,h6{
     }
 }
 
+.experience-container{
+    display:flex; 
+    width: 100%; 
+    border-radius:4px; 
+    border:1px solid $dark-1;
+
 .tab {
     // float: left;
-    border-right: 2px solid $blue;
+    border-right: 2px solid $dark-1;
     background-color:$dark;
     width: 30%;
     // height: 300px;
@@ -114,7 +120,7 @@ h2,h5,h6{
   
   /* Change background color of buttons on hover */
   .tab button:hover, .tab button.active {
-    background-color: $dark-1;
+    background-color: $dark-1-opacity;
   }
   
 
@@ -128,8 +134,11 @@ h2,h5,h6{
     border-left: none;
     // height: 300px;
     // border-radius: 0px 4px 4px 0px;
+    li{
+        color: $light;
+    }
   }
-
+}
 .wp-block-cover{
     padding:0;
     min-height:300px;
@@ -184,6 +193,7 @@ h2,h5,h6{
         }
     }
 }
+
 
 .wp-bootstrap-blocks-container_work{
     position: relative;
