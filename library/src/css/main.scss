@@ -1,19 +1,29 @@
 @import "mixins";
 @import "header-footer";
 @import "form";
+@import "stars";
 @font-face{
     font-family: monterrat;
     src: url(../../Montserrat-Regular.ttf)
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body{
-    padding:0;
-    margin:0 3em;
+    padding:0 2em;
     font-family: "monterrat", sans-serif;
 }
+
 p{
     color:$blue;
     font-size: 1.5em;
-
+    a{
+        color:$light;
+        &:hover{
+            color:$blue;
+        }
+    }
 }
 p, h2{
     margin:$margin;
@@ -23,6 +33,19 @@ h2,h3{
 }
 h2{ 
 font-size: 3em;
+display:flex;
+align-items:center;
+
+&.line:after{
+    content: "";
+    display: block;
+    position: relative;
+    top: 3px;
+    width: 425px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: $blue;
+} 
 }
 h5,h6{
     font-size: 1em;
@@ -250,6 +273,9 @@ h2,h5,h6{
     }
 
     @include for-desktop{
+        a{
+            display:contents;
+        }
         figure{
             width:50%;
             position: relative;
@@ -261,9 +287,27 @@ h2,h5,h6{
             position: absolute;
             top: 0; bottom: 0; 
             background-color: $dark-1;
+            h5,h6{
+                margin:1em 0;
+            }
+            &.no_content{
+                h5,h6{
+                    margin:12px 0;
+                }
+                h5{
+                    font-size:2rem;
+                }
+                h6{
+                    font-size:1.5rem;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
             &_box{
                 p{
                     font-size:1em;
+                    margin-left:0;
                 }
 
             }
@@ -279,7 +323,6 @@ h2,h5,h6{
     &_right{
         .info-container{
             right:0;
-            text-align: right;
             left:auto;
         }
     }

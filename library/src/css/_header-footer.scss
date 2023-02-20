@@ -198,10 +198,10 @@ header {
     width:100%;
   }
   header {
-    background-color:$dark;
+    background-color:$dark-opacity;
     z-index:1;
     display: flex;
-
+    
     align-items: center;
     a {
       padding: 1em;
@@ -210,7 +210,7 @@ header {
       font-weight: 600;
     }
     &.down{
-      background-color:$dark-1;
+      background-color:$dark-1-opacity;
       height:35px;
      
     }

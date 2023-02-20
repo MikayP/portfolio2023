@@ -9,6 +9,8 @@
 </head>
 <body <?php body_class(); ?>>
 <header>
+
+
 <!-- https://codepen.io/alvarotrigo/pen/RwQPGVv -->
     <button aria-label="Toggle menu" class="nav-button button-lines button-lines-x close" role="button" type="button">
       <span class="lines"></span>
@@ -24,6 +26,9 @@ wp_nav_menu( $args );
 </nav>
 
 </header>
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
 
 
 
