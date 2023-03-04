@@ -7,7 +7,7 @@ $header-height: 80px;
 $nav-toggle-size: 2rem;
 $nav-toggle-transition-speed: 0.3s;
 $nav-transition-speed: 0.6s;
-$nav-width: 25vw;
+$nav-width: 50vw;
 $zindex-header: 500;
 
 header {
@@ -122,9 +122,7 @@ header {
   height: calc($nav-toggle-size/10);
   width: calc($nav-toggle-size);
 
-  &:hover {
-    background: #000;
-  }
+
 }
 
 .button-lines {
@@ -198,7 +196,7 @@ header {
     width:100%;
   }
   header {
-    background-color:$dark-opacity;
+    background-color:$dark-1-opacity;
     z-index:1;
     display: flex;
     
