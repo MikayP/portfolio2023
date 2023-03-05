@@ -1,6 +1,6 @@
 //== Variables
 //
-$color-white: #fff;
+$color-white: $light;
 $color-white-darker: darken($color-white, 5%);
 $color-white-darken: darken($color-white, 15%);
 $header-height: 80px;
@@ -29,6 +29,7 @@ header {
   }
   a {
     text-decoration: none;
+    color: $light;
   }
 }
 
@@ -37,20 +38,22 @@ header {
 }
 @include for-phone-tablet-only {
   .nav-wrapper {
-    background-color: #343c55;
+    background-color: $dark-1;
     box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
     height: 100%;
     padding-top: $header-height;
     perspective: 1000px;
     position: fixed;
     right: 0;
-    top: 0;
+  top: 0;
     transform: translateX(100%);
     transition: transform $nav-transition-speed,
       visibility $nav-transition-speed;
     visibility: hidden;
     width: $nav-width;
     z-index:3;
+    text-align: left;
+    justify-content: flex-start;
     .nav-visible & {
       transform: translateX(0);
       visibility: visible;
@@ -70,7 +73,7 @@ header {
       list-style: none;
       &.active {
         a {
-          background-color: #212635;
+          background-color: $dark-1;
         }
       }
       a {
@@ -78,11 +81,9 @@ header {
         line-height: 1.4;
         padding: 0.7em 0.5em 0.7em 1.4em;
         text-transform: uppercase;
-        color: white;
         text-decoration: none;
         &:focus,
         &:hover {
-          background-color: #2b3145;
           text-decoration: none;
         }
       }
@@ -204,7 +205,7 @@ header {
     a {
       padding: 1em;
       margin: 0.5em;
-      color:$blue;
+
       font-weight: 600;
     }
     &.down{

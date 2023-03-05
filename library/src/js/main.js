@@ -34,14 +34,30 @@ jQuery(document).ready(function( $ ) {
   });
 });
 
+jQuery("a[href='#top']").click(function() {
 
-jQuery('.menu-item a').on('click', function(e){
+});
+
+
+// scroll to site, but not site links
+jQuery('.menu-item:not(.window-top):not(.site-link) a').on('click', function(e){
   e.preventDefault();
+  if( !jQuery(this).hasClass('window-top') ){
   var get_section = jQuery(this).attr('href'),
     section_offset = jQuery(get_section).offset().top;
   jQuery('body,html').animate({
     scrollTop: section_offset
   }, 1000);
+} 
 });
+
+jQuery('.menu-item.window-top').on('click', function(e){
+  jQuery('html, body').animate({scrollTop: '0px'}, 1000);
+
+})
+
+
+
+
 
 AOS.init();

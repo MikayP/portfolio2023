@@ -99,6 +99,7 @@ li{
     &-about{
         figure{
             margin: 0;
+            text-align: center;;
             img{
                 border-radius: 50%;
             }
@@ -154,71 +155,11 @@ li{
   
   /* Style the tab content */
   .tabcontent {
-    // float: left;
     padding: 0px 12px;
-    // border: 1px solid $blue;
     width: 70%;
     border-left: none;
-    // height: 300px;
-    // border-radius: 0px 4px 4px 0px;
-
   }
 }
-
-// a{
-//     padding:0;
-//     min-height:300px;
-//     &__background{
-//         opacity: 0.2 !important;
-//     }
-//     @include for-desktop{
-//         min-height:400px;
-//     }
-//     .wp-block-cover__inner-container{
-//         background-color: rgba(42, 81, 187, 0.5);
-//         position: absolute;
-//         height:100%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         flex-direction: column;
-//         p{
-//             padding:0 1em;
-//             color:white;
-//         }
-//     }
-
-//     @include for-desktop{
-//         min-height:400px;
-//         overflow:hidden;
-//         img{
-//             transition: all 0.3s ease-in-out; 
-//         }
-//         &:hover{
-//             img{
-//                 transform: scale(1.1);
-//             } 
-//             .wp-block-cover__inner-container{
-//                 background-color: #222831a6;
-//             p{
-//                 opacity: 1;
-//             }
-            
-            
-//         }
-//         }
-//         .wp-block-cover__inner-container{
-
-//             background-color: transparent;
-//             p{
-//                 opacity: 0;
-//             }
-//             &,p{
-//                 transition: all 0.5s ease-in-out;
-//             }
-//         }
-//     }
-// }
 
 
 .wp-bootstrap-blocks-container_work{
@@ -267,13 +208,14 @@ li{
             display: flex;
             flex-direction: column;
             justify-content: center;
+            h5{
+                margin-bottom: 0;
+            }
         }
-        // position:absolute;
-        // top:0;
-        // height:-webkit-fill-available;
-        // width:-webkit-fill-available;
-        // left:0;
-        // padding:1em;
+
+        &_box{
+            padding:1em;
+        }
         h5{
             color:$light;
             font-size:2rem;
@@ -316,6 +258,7 @@ li{
                 padding: 1em;
                 h5,h6{
                     margin:0 0 12px;
+
                 }
                 p{
                     margin-top:12px;
@@ -324,6 +267,7 @@ li{
       
             }
             &_box{
+                padding:0;
                 p{
                     font-size:1em;
                     margin-left:0;
