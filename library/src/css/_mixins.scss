@@ -15,10 +15,11 @@
   }
     
   // https://colorhunt.co/palette/03001c301e675b8fb9b6eada
-  $dark: #03001C;
+  $dark: #010102; // body
   $dark-opacity:#03001c79;
-  $dark-1: #301E67;
-  $dark-1-opacity: #301e67c2;
+  $dark-1:  rgb(24, 39, 53);
+  $down-header-no-opacity: rgb(24, 39, 53);
+  $dark-1-opacity: rgba(24, 39, 53, 0.494); // header
   $blue: #4B63AD;
   $light: #B6EADA;
   $margin: 0.5rem 0;

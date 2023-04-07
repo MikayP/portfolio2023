@@ -13,15 +13,17 @@ html, body {
 body{
     padding:0 2em;
     font-family: "monterrat", sans-serif;
+    position: relative;
+    margin:0;
 }
 
 p{
-    color:$blue;
+    color:  $light;
     font-size: 1.5em;
     a{
         color:$light;
         &:hover{
-            color:$blue;
+            color:  $light;
         }
     }
 }
@@ -290,9 +292,7 @@ li{
         }
     }
         min-height:400px;
-    .info-container{
 
-        }
         img{
             transition: background-color 0.3s ease-in-out;
             transition: transform 0.3s ease-in-out;
@@ -306,7 +306,7 @@ li{
                 } 
 
         .info-container_transition{
-            background-color:#6F2670;
+            background-color:#171E33;
         }
         .bg-color{
             background-color: transparent;
