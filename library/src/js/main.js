@@ -39,11 +39,12 @@ jQuery('.menu-item:not(.window-top):not(.site-link) a').on('click', function(e){
   e.preventDefault();
   var get_section = jQuery(this).attr('href'),
     section_offset = jQuery(get_section).offset().top;
-  jQuery('body,html').stop.animate({
+  jQuery('body,html').animate({
     scrollTop: section_offset
   }, 1000);
 
 });
+
 
 jQuery('.menu-item.window-top').on('click', function(e){
   jQuery('html, body').animate({scrollTop: '0px'}, 1000);
