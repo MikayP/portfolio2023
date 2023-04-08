@@ -21,9 +21,6 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-jQuery(document).ready(function() {
-  jQuery(window).scrollTop(0);
-});
 
 jQuery(document).ready(function( $ ) {
 
@@ -40,13 +37,12 @@ jQuery(document).ready(function( $ ) {
 // scroll to site, but not site links
 jQuery('.menu-item:not(.window-top):not(.site-link) a').on('click', function(e){
   e.preventDefault();
-  if( !jQuery(this).hasClass('window-top') ){
   var get_section = jQuery(this).attr('href'),
     section_offset = jQuery(get_section).offset().top;
   jQuery('body,html').stop.animate({
     scrollTop: section_offset
   }, 1000);
-} 
+
 });
 
 jQuery('.menu-item.window-top').on('click', function(e){

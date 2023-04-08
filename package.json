@@ -17,6 +17,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
+    "jquery": "^3.6.4",
     "sass": "^1.56.1"
   }
 }
