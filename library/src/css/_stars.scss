@@ -1,6 +1,7 @@
 // https://codepen.io/sarazond/pen/LYGbwj
 
 // n is number of stars required
+body.page-template-menu_and_footer-php{
 @function multiple-box-shadow ($n) {
     $value: '#{random(8000)}px #{random(8000)}px #FFF';
     @for $i from 1500 through $n {
@@ -74,3 +75,4 @@ $shadows-big:    multiple-box-shadow(100);
     transform: translateY(-2000px);
   }
 };
+}

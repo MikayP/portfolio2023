@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
 <header>
 
-
+<?php if(is_page_template('menu_and_footer.php')){ ?>
 <!-- https://codepen.io/alvarotrigo/pen/RwQPGVv -->
     <button aria-label="Toggle menu" class="nav-button button-lines button-lines-x close" role="button" type="button">
       <span class="lines"></span>
@@ -19,6 +19,8 @@
 
 <?php $args = [ 'theme_location' => 'primary' ];
 wp_nav_menu( $args ); 
+}
+do_action('wp_head');
 ?>
 
 

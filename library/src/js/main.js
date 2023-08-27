@@ -1,3 +1,4 @@
+if(document.querySelector('body.page-template-menu_and_footer-php') !== null){
 let navButton = document.querySelector(".nav-button");
 
 navButton.addEventListener("click", (e) => { 
@@ -5,7 +6,9 @@ navButton.addEventListener("click", (e) => {
   
   // toggle nav state
   document.body.classList.toggle("nav-visible");
-});    
+});  
+}
+  
 
 // Work section
 function openCity(evt, cityName) {
@@ -51,8 +54,22 @@ jQuery('.menu-item.window-top').on('click', function(e){
 
 })
 
+ 
 
+jQuery('nav a').on('click', function(event) {
+  jQuery(this).parent().find('a').removeClass('active');
+  jQuery(this).addClass('active');
+});
 
-
+jQuery(window).on('scroll', function() {
+  jQuery('.wp-bootstrap-blocks-container').each(function() {
+      if(jQuery(window).scrollTop() >= jQuery(this).offset().top) {
+        console.log(jQuery(this).prev())
+          var id = jQuery(this).attr('id');
+          jQuery('nav a').removeClass('active');
+          jQuery('nav a[href=#'+ id +']').addClass('active');
+      }
+  });
+});
 
 AOS.init();

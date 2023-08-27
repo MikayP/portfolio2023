@@ -12,6 +12,13 @@ function styles() {
         .pipe(cssMinify() )
         .pipe(dest('./library/dist/styles/'))
 }
+// function side_project_styles() {
+//     return src('./library/src/css/side_projects/**/*.scss')
+//         .pipe(scss ())
+//         .pipe(autoPrefixer('last 2 versions'))
+//         .pipe(cssMinify() )
+//         .pipe(dest('./library/dist/styles/side_projects/'))
+// }
 
 // scripts
 
@@ -22,6 +29,12 @@ function scripts() {
         .pipe(jsMinify())
         .pipe(dest('./library/dist/scripts/'))
 }
+
+// function side_project_scripts() {
+//     return src('./library/src/js/side_projects/**/*.js')
+//         .pipe(jsMinify())
+//         .pipe(dest('./library/dist/scripts/side_projects/'))
+// }
 
 // watch
 

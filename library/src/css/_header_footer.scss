@@ -1,5 +1,6 @@
 //== Variables
 //
+body.page-template-menu_and_footer-php{
 $color-white: $light;
 $color-white-darker: darken($color-white, 5%);
 $color-white-darken: darken($color-white, 15%);
@@ -20,6 +21,8 @@ header {
   width: 100%;
   z-index: $zindex-header;
 }
+
+
 .nav-wrapper {
   display: flex;
   justify-content: center;
@@ -235,4 +238,5 @@ header,.nav-wrapper a{
   transition: all 0.6s ease-in-out;
 }
 
+}
 }

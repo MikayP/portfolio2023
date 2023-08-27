@@ -1,5 +1,6 @@
+
 @import "mixins";
-@import "header-footer";
+@import "header_footer";
 @import "form";
 @import "stars";
 @font-face{
@@ -16,7 +17,8 @@ body{
     position: relative;
     margin:0;
 }
-
+body.page-template-menu_and_footer-php{
+    
 p{
     color:  $light;
     font-size: 1.5em;
@@ -314,5 +316,5 @@ li{
     }
     }
 
-  
+}
 }
