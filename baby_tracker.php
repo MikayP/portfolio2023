@@ -42,22 +42,14 @@ fetch(jsonFile)
         <h3>Key growing event(s) this week:</h3>
         <ul>
         ${entry.keyEvents.map(event => `<li>${event}</li>`).join("")}
-    </ul>`
-        ;
-        console.log(`Week ${entry.weekNumber}:`);
-        console.log(`Weight: ${entry.weight}`);
-        console.log(`Height: ${entry.height}`);
+        </ul>`;
         imageElement.src = entry.image;
-        console.log(`Image URL: ${entry.image}`);
-        entry.keyEvents.forEach((event) => {
-          console.log(`${event}`);
-        });
       }  else {
           console.log("No Key Events for this week.");
         }
       }
 
-      const inputWeekNumber = 29; // Replace with the desired week number
+      const inputWeekNumber = weekOfBaby; // Replace with the desired week number
     findWeekInfo(inputWeekNumber);
   });
 
