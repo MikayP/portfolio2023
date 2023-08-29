@@ -1,4 +1,47 @@
-body{
-    background-color: yellow;
+.page-template-baby_tracker{
+    min-height: 100vh;
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    background: #fad6487d;
+   > h2{
+        text-align: center;
+        background-color: #9230FA ;
+        margin:0;
+        padding:1em;
+        color:white;;
+    }
+    section{
+        display:flex;
+        justify-content: center;
+        // align-items:center;
+        // flex-direction: column;
+        text-align: center;
+        >div{
+            padding:2em;
+        }
+        ul{
+            text-align: left;
+        }
+        img{
+        max-height: 42vh;
+        max-width: inherit;
+        border-radius: 8px;
+    }
+    h2,h3,h4, ul li,p{
+        color:#3033FA;
+        font-weight: 600;
+    }
+    > p{
+        padding-top:1em;
+    }
+    p:nth-of-type(2){
+        font-size:12px;
+    }
+        h4{
+            margin:0;
+        }
+    }
 }
-   
+    

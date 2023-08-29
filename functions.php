@@ -8,7 +8,9 @@ function main_css(){
 
 function my_scripts() {
     // Register the script like this for a plugin:
+        
     wp_enqueue_script( 'main_js', get_template_directory_uri()  . '/library/dist/scripts/main.js', array('jquery'), '1.0', true);
+    wp_script_add_data('main_js', 'type', 'module');  // Add this line
     wp_enqueue_script( 'AOS_js', 'https://unpkg.com/aos@2.3.1/dist/aos.js');
 
 }
