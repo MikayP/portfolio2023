@@ -94,7 +94,7 @@ var x = setInterval(function() {
 
 
   // Display the result in the element with id="demo"
-  document.getElementById("baby_days").innerHTML = "&nbsp"+ days + " days and " + hours + " hours&nbsp";
+  document.getElementById("baby_days").innerHTML = "&nbsp"+ days + " days and " + hours + " hours";
 
   // If the count down is finished, write some text
   if (distance < 0) {
