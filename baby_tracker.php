@@ -15,7 +15,7 @@ endwhile; wp_reset_postdata();
 
   <div>
     <img id="baby_image" src="">
-    <h2>It's now  <span id="baby_days"></span> till she it born. *</h2>
+    <h2>It's now <span id="baby_days"></span> till she is born. *</h2>
     <h4>This week she is roughly...</h4>
     <div id="baby_facts"></div>
     <p>* Based off a Nov 8th birth date **</p>
