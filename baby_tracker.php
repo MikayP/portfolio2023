@@ -18,7 +18,7 @@ endwhile; wp_reset_postdata();
     <h2>It's now<span id="baby_days"></span> till she is born. *</h2>
     <h4>This week she is roughly...</h4>
     <div id="baby_facts"></div>
-    <p>* Based off a Nov 8th birth date **</p>
+    <p>* Based off a Nov 9th birth date **</p>
     <p>** Assumming Mike's math is correct</p>
   </div>
 </section>
