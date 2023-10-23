@@ -77,7 +77,7 @@ AOS.init();
 if(document.querySelector('body.page-template-menu_and_footer-php') === null){
 
 // Set the date we're counting down to
-var countDownDate = new Date("Nov 8, 2023").getTime();
+var countDownDate = new Date("Nov 9, 2023").getTime();
   // Get today's date and time
   var now = new Date().getTime();
 
@@ -99,7 +99,7 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("baby_days").innerHTML = "Sohpie is born!";
+    document.getElementById("baby_days").innerHTML = "Girl is born!";
   }
   return days;
 }, 1000);
